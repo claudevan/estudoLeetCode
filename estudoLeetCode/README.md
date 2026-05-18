@@ -7,3 +7,5 @@ Repositório dedicado ao treinamento de resoluções de problemas do LeetCode. E
 ## ✅ Exercícios Resolvidos
 
 - **Exercício 49** - [Group Anagrams](https://leetcode.com/problems/group-anagrams/)
+- **Exercício 238** - [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/) (Força bruta - versão a melhorar)
+
