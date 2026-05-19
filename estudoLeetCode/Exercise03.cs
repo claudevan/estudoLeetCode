@@ -4,7 +4,25 @@ public class Exercise03
 {
     public int LengthOfLongestSubstring(string s)
     {
-        return 0;
+        Dictionary<char, int> sequence = new Dictionary<char, int>();
+        int maxLength = 0;
+        int left = 0;
+
+        for (int right = 0; right < s.Length; right++)
+        {
+            if (sequence.ContainsKey(s[right]) && sequence[s[right]] >= left)
+            {
+                left = sequence[s[right]] + 1;
+            }
+            else
+            {
+                maxLength = Math.Max(maxLength, right - left + 1);
+            }
+            
+            sequence[s[right]] = right;
+        }
+        
+        return maxLength;
     }
 
     public int LengthOfLongestSubstringBrutalMode(string s)
@@ -12,7 +30,6 @@ public class Exercise03
         if(s.Length == 0)            
             return 0;
         
-        int k = 3;
         int max_length = 1;
         Dictionary<char, int> max_caracters_sequence = new Dictionary<char, int>();
         
